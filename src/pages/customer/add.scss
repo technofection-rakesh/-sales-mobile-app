@@ -1,0 +1,32 @@
+customer-add-page{	
+	.item{
+		padding-left: 0 !important;
+	}
+	
+	
+	ion-list > .item-input.item-input-has-focus:last-child,
+	ion-list > .item-input.input-has-focus:last-child
+	{
+		border-bottom: 0 !important;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+	}
+	
+	ion-list > .item-input.item-input-has-focus:last-child .item-inner
+	{
+		border-bottom: 1px solid #488aff !important;
+		box-shadow: 0 -1px 0 0 #488aff inset !important;
+		-webkit-box-shadow: 0 -1px 0 0 #488aff inset !important;
+	}
+	
+	
+	ion-list .item-input:last-child {
+		border-bottom: 0 !important;
+	}
+
+	.no-padding-card{
+		margin:0 !important;
+		padding:0 !important;
+		width:100%;
+	}
+}

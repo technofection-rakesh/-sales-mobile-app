@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+	<button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customer Details</ion-title>
+	<ion-buttons end>
+		 <button ion-button icon-only (click)="openCustomerEditModal()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+		 <button ion-button icon-only (click)="openVisitAddModal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+     
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<h2>Company Name</h2>
+			<h3>{{customer.CompanyName}}</h3>
+		</ion-item>
+		<ion-item>
+			<h2>Address</h2>
+			<h3>{{customer.Address}}</h3>
+			<h3>{{customer.City}}</h3>
+			<h3>landmark-{{customer.Landmark}}</h3>
+			<h3>{{customer.StateName}} - {{customer.PinCode}}</h3>
+		</ion-item>
+		<ion-item>
+			<h2>Contact Person</h2>
+			<h3>{{customer.Name}}</h3>
+		</ion-item>
+		<ion-item>
+			<h2>Phone</h2>
+			<h3>{{customer.PhoneNo}}</h3>
+			<h3 *ngIf="customer.AlternatePhoneNo!=''">{{customer.AlternatePhoneNo}}</h3>
+		</ion-item>
+		<ion-item (click)="mail()">
+			<h2>Email</h2>
+			<h3>{{customer.EmailID=="" ? "N/A" : customer.EmailID}}</h3>
+		</ion-item>
+		<ion-item>
+			<h2>GST</h2>
+			<h3 *ngIf="customer.GST!=''">{{customer.GST}}</h3>
+			<h3 *ngIf="customer.GST==''">Not Registered</h3>
+		</ion-item>
+		<ion-item>
+			<h2>Contact Person</h2>
+			<h3>{{customer.Name}}</h3>
+		</ion-item>
+		<ion-item>
+			<h2>Weekly Off Days</h2>
+			<h3>{{offDays}}</h3>
+		</ion-item>
+	</ion-list>
+	
+	<button ion-button full medium color="primary" (click)="showVisitHistory()">Visit History</button>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Request Leave</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form (ngSubmit)="submit()">
+		<ion-list>
+			<ion-item>
+				<ion-label floating>From Date</ion-label>
+				<ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Form.FromDate" name="FromDate"></ion-datetime>
+			</ion-item>
+			<ion-item>
+				<ion-label floating>To Date</ion-label>
+				<ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Form.ToDate" name="ToDate"></ion-datetime>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>Describe your leave request</ion-label>
+				<ion-textarea class="note" [(ngModel)] = "Form.Note" name="Note"></ion-textarea>
+			</ion-item>
+		</ion-list>	  
+		<button ion-button full medium color="primary" type="submit">Save</button>
+	</form>
+</ion-content>

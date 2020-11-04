@@ -1,0 +1,39 @@
+allowance-add-page{	
+	.item-md{
+		padding-left: 0;
+	}
+	
+	.card-md{
+		margin: 0;
+		width: 100%;
+		padding: 20px 0;
+	}
+	
+	.list-md > .item-input.item-input-has-focus:last-child,
+	.list-md > .item-input.input-has-focus:last-child
+	{
+		border-bottom: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+	
+	.list-md > .item-input.item-input-has-focus:last-child .item-inner
+	{
+		border-bottom: 1px solid #488aff;
+		box-shadow: 0 -1px 0 0 #488aff inset;
+		-webkit-box-shadow: 0 -1px 0 0 #488aff inset;
+	}
+	
+	.list-md > .item-input:last-child .item-inner
+	{
+		border-bottom: 1px solid #dedede;
+	}
+	
+	.list-md .item-input:last-child {
+		border-bottom: 0;
+	}
+	
+	.note textarea{
+		height: 80px;
+	}
+}

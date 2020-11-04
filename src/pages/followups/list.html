@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Follow-ups</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let followup of Followups" (click)="itemTapped($event, followup)">
+      <h2>{{followup.CompanyName}}</h2>
+	  <h3>{{followup.CustomerName}}</h3>
+	  <h3>{{(followup.NextVisitDate * 1000) | date : "d MMM y"}}</h3>
+    </button>
+  </ion-list>
+</ion-content>

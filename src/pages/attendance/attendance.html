@@ -1,0 +1,23 @@
+<ion-content class="background">
+	<ion-grid class="full-height">
+		<ion-row class="full-height" align-items-center>
+			<ion-col text-center>  
+				<ion-grid>
+					<ion-row>
+						<ion-col>
+							<div class="with-hours">
+								{{currentDateTime}}
+							</div>							
+							<ion-icon name="time" class="timer"></ion-icon>  
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col>						
+							<button [disabled]="!IsGPSGood" ion-button (click)="registerAttendance()" class="meeting-start">Register Attendance</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

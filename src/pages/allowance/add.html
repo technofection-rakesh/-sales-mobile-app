@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Allowance Claim</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form (ngSubmit)="submit()">
+		<ion-list>
+			<ion-item>
+				<ion-label floating>Allowance Type</ion-label>
+				<ion-select [(ngModel)]="Form.AllowanceTypeID" name="AllowanceTypeID">
+					<ion-option *ngFor="let AllowanceType of AllowanceTypes" [value]="AllowanceType.ID">{{AllowanceType.TypeName}}</ion-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label floating>Amount</ion-label>
+				<ion-input type="number" [(ngModel)]="Form.Amount" name="Amount"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>Note</ion-label>
+				<ion-textarea class="note" [(ngModel)] = "Form.Note" name="Note"></ion-textarea>
+			</ion-item>
+		</ion-list>	  
+		<br>
+		<button ion-button full medium color="primary" type="submit">Save</button>
+	</form>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+	  <button menuClose ion-item (click)="customers()">
+		<ion-icon name="chatboxes" item-start medium color="light"></ion-icon> 
+		Customers
+	  </button>
+	  <button menuClose ion-item (click)="followups()">
+		  <ion-icon name="chatboxes" item-start small color="light"></ion-icon>
+		Followup
+	  </button>
+	  <button menuClose ion-item (click)="allowance()">
+		<ion-icon name="cash" item-start small color="light"></ion-icon>
+		Allowance
+	  </button>
+	  <button menuClose ion-item (click)="leave()">
+		 <ion-icon name="calendar" item-start small color="light"></ion-icon>
+		Leave
+	  </button>
+	  <button menuClose ion-item (click)="order()">
+		 <ion-icon name="list-box" item-start small color="light"></ion-icon>
+		Order
+	  </button>
+	    <button menuClose ion-item (click)="attendance()">
+		 <ion-icon name="clipboard" item-start small color="light"></ion-icon>
+		Attendance
+	  </button>
+	  <button menuClose ion-item (click)="logout()">
+		  <ion-icon name="log-out" item-start small color="light"></ion-icon>
+		Logout
+	  </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

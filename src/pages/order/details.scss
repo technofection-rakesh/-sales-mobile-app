@@ -1,0 +1,44 @@
+order-details-page {
+	h3{
+		font-size: 1.25rem;
+		color: #6d6d6d;
+	}
+	
+	ion-header 	ion-card .item-inner{
+		margin-left: 0 !important;
+	}
+	
+	ion-header{
+		 background: color($colors, dark);
+	}
+	
+	.order-total{
+		margin-bottom: 0 !important;
+	}
+	
+	ion-footer ion-item,
+	ion-footer .toolbar-background{
+		background-color: color($colors, primary) !important;
+	}
+	
+	ion-card ion-list ion-item{
+		font-size: 1.2rem !important;
+	}
+	
+	ion-card ion-list ion-item .label{
+		margin-top: 3px !important;
+	}
+	
+	ion-card ion-list ion-item [item-left],
+	ion-card ion-list ion-item [item-start]{
+		margin-right: 7px !important;
+	}
+	
+	ion-card ion-list ion-icon{
+		font-size: 2rem !important;
+	}
+	
+	ion-card ion-list .item:first-child{
+		border-top: 1px solid #41636b !important;
+	}
+}

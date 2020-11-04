@@ -1,0 +1,87 @@
+new-order-page {
+	h3{
+		font-size: 1.25rem;
+		color: #6d6d6d;
+	}
+	
+	ion-header h2.customer-placeholder {
+		color: #999999;
+	}	
+	
+	ion-header ion-list{
+		margin-bottom: 0 !important;
+	}
+	
+	.order-total{
+		margin-bottom: 0 !important;
+	}
+	
+	.order-total ion-item,
+	.order-total .toobar-background{
+		background-color: transparent; 
+	}
+	
+	.toolbar-background{
+		background-color: color($colors, primary);
+	}
+	
+	.header{
+		background: #0f2129 !important;  
+	}
+	
+	 .list .item:first-child{
+		border-top: 1px solid #41636b !important;
+	}
+	
+	ion-header ion-item .item-inner,
+	ion-header .item-block .item-inner{
+		border-bottom: none !important;
+		box-shadow: none !important;
+	}
+	
+	ion-header ion-item ion-label{
+		font-size: 1.5rem;
+	}
+	
+	ion-header ion-item{
+		font-size: 1.5rem !important;
+	}
+	
+	ion-header ion-item input.text-input{
+		text-align: right;
+		padding-right: 10px;
+	}
+	
+	ion-card .card-header{ 
+		padding: 0px !important;
+	}
+	
+	.item .item-inner{
+		margin-left: 0 !important;
+	}
+	
+	.item-inner h2{
+		color: #feaa24 !important;
+	}
+	
+	ion-footer ion-label,
+	ion-footer button,
+	ion-footer ion-note{
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	
+	ion-list .item-block .item-inner{
+	margin-left: 0 !important;
+	}
+	
+	.add-button{
+		height: 3.6rem !important;
+	}
+	
+	.new-order-page ion-footer .toolbar-background{
+		background-color: color($colors, primary) !important;
+	}
+
+
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customer Visits</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="openVisitAddModal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-card *ngFor="let visit of visitHistory">
+
+		<ion-item>
+		<h2>Visit Date: {{(visit.VisitDate * 1000) | date: "d MMM y"}}</h2>
+		<p>Purpose: {{visit.Purpose}}</p>
+		</ion-item>
+		<ion-card-content>
+		<p>{{visit.Remarks}}</p>
+		</ion-card-content>
+
+	</ion-card>
+
+</ion-content>

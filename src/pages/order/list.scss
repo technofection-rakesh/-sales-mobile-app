@@ -1,0 +1,22 @@
+order-list-page {
+	h3{
+		font-size: 1.25rem !important;
+		color: #52b4db !important;
+	} 
+	
+	div.order-status{
+		font-size: 1.25rem;
+	}
+	
+	span.status-1{
+		color: map-get($colors, warning);
+	}
+	
+	span.status-2{
+		color: map-get($colors, primary);
+	}
+	
+	span.status-3{
+		color: map-get($colors, secondary);
+	}
+}

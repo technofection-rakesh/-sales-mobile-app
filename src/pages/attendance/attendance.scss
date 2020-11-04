@@ -1,0 +1,37 @@
+attendance-page {
+	.full-height{
+		height: 100%;
+	}
+	
+	ion-row div.with-hours{
+		font-size: 200%; 
+		color: #fff;
+	}
+	
+	ion-row div.without-hours{ 
+		font-size: 200%;
+		color: #fff;
+	}
+		
+	.background{
+		background-color: #417185; /* Old browsers */ 
+		background: -moz-linear-gradient(to bottom, #417185 0%, #0f2129 100%); /* FF3.6-15 */   
+		background: -webkit-linear-gradient(to bottom, #417185 0%, #0f2129 100%); /* Chrome10-25,Safari5.1-6 */ 
+		background: linear-gradient(to bottom, #417185 0%, #0f2129 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */
+	}
+	
+	.background .scroll-content{
+		background: url("../assets/imgs/app-abstract-bg.png") no-repeat 50% center;
+		background-size: cover;
+	}
+	
+	
+	.timer{
+		color: #fff;
+		font-size: 6rem !important;
+		opacity: 0.6; 
+		margin: 12px 0;
+	}
+	
+}

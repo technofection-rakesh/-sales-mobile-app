@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Leave</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="openLeaveRequestModal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let Leave of LeaveList">
+		<h2>{{(Leave.FromDate * 1000) | date:"d MMM y"}} - {{(Leave.ToDate * 1000) | date:"d MMM y"}}</h2>
+		<h3>For {{Math.ceil((Leave.ToDate - Leave.FromDate) / (60 * 60 * 24))}} days</h3>
+		<ion-note item-end><ion-icon class="status-icon" [name]="Leave.StatusIcon" [color]="Leave.StatusIconColor"></ion-icon></ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

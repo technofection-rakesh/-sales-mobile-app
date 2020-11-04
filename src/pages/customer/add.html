@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Company Name</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.CompanyName"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>Address</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.Address"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>Landmark</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.Landmark"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>City</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.City"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>State</ion-label>
+			<ion-select [(ngModel)]="Form.StateID" placeholder="Select State">
+				<ion-option *ngFor="let state of StateList" [value]="state.ID">{{state.State}}</ion-option>
+			</ion-select>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>Pin Code</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.PinCode"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Contact Person</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.Name"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Phone Number 1</ion-label>
+			<ion-input type="number"  [(ngModel)]="Form.PhoneNo"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label floating>Phone Number 2</ion-label>
+			<ion-input type="number" [(ngModel)]="Form.AlternatePhoneNo"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Email</ion-label>
+			<ion-input type="email" [(ngModel)]="Form.EmailID"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>GST</ion-label>
+			<ion-input type="text" [(ngModel)]="Form.GST"></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-card class="no-padding-card">
+ <ion-card-header>
+   	Working Days
+  </ion-card-header>
+  <ion-card-content>
+
+	  	<ion-item>
+	      <ion-label>Monday</ion-label>
+	      <ion-checkbox color="secondary"  [(ngModel)]="OffDays.Monday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Tuesday</ion-label>
+	      <ion-checkbox color="secondary" [(ngModel)]="OffDays.Tuesday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Wednesday</ion-label>
+	      <ion-checkbox color="secondary"  [(ngModel)]="OffDays.Wednesday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Thursday</ion-label>
+	      <ion-checkbox color="secondary"  [(ngModel)]="OffDays.Thursday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Friday</ion-label>
+	      <ion-checkbox color="secondary"  [(ngModel)]="OffDays.Friday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Saturday</ion-label>
+	      <ion-checkbox color="secondary" [(ngModel)]="OffDays.Saturday"></ion-checkbox>
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-label>Sunday</ion-label>
+	      <ion-checkbox color="secondary" [(ngModel)]="OffDays.Sunday"></ion-checkbox>
+	    </ion-item>
+
+  </ion-card-content>
+</ion-card>
+  
+	
+	<br>
+	<button ion-button full medium color="primary" (click)="submit()">{{buttonText}}</button>
+
+</ion-content>

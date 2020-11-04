@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customers</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="openCustomerAddModal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar [(ngModel)]="searchText"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let customer of customers | filter: searchText" (click)="itemTapped(customer)">
+      <h2>{{customer.CompanyName}}</h2>
+	  <h3>{{customer.Name}}</h3>
+    </button>
+  </ion-list>
+</ion-content>

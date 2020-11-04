@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Orders</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="openCreateOrderModal()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="reloadOrders($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="Reload Orders"
+      refreshingSpinner="circles"
+      refreshingText="Reloading orders..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <button ion-item *ngFor="let Order of OrderList" (click)="showOrderDetails(Order)">
+		<h2>{{Order.CompanyName}}</h2>
+		<h3>Order Date: {{(Order.OrderDate * 1000) | date:"d MMM y"}}</h3>
+		<div class="order-status">Order Status: <span class="status-{{Order.Status}}">{{Order.Status == 1 ? "Awaiting Confirmation" : (Order.Status == 2 ? "Paid" : "Delivered")}}</span></div>
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,95 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+input {
+	color: $text-input-highlight-color-valid;
+}
+
+.list .item{
+	border-bottom: 1px solid #41636b;
+}
+
+.list .item h2{
+	color: #e8b45a;
+}
+
+.list .item h3{
+	color: #ffe8c3;
+	font-size: 1.25rem !important;
+}
+
+ion-menu ion-header .toolbar-background,
+ion-header ion-navbar .toolbar-background {
+  background: color($colors, primary) !important;
+}
+
+ion-menu ion-header .toolbar-title,
+ion-header ion-navbar .toolbar-title{
+	color: #fff !important;
+}
+
+.bar-button-default-md,
+.bar-button-clear-md-default,
+.bar-button-md-default,
+.bar-button-default-ios,
+.bar-button-clear-ios-default,
+.bar-button-ios-default {
+  color: #FFF;
+  background-color: transparent;
+}
+
+.bar-button-default-md:hover:not(.disable-hover), 
+.bar-button-clear-md-default:hover:not(.disable-hover), 
+.bar-button-md-default:hover:not(.disable-hover),
+.bar-button-default-ios:hover:not(.disable-hover), 
+.bar-button-clear-ios-default:hover:not(.disable-hover), 
+.bar-button-ios-default:hover:not(.disable-hover) {
+    color: #5ab3d7;
+}
+
+.item-md,
+.item-ios{
+	color: #52b4db;
+}
+
+ion-icon{
+	font-size: 3rem !important;
+}
+
+.list-md .item-block .item-inner{
+	border-bottom: none;
+}
+
+ion-menu ion-list ion-icon{
+	font-size: 2.1rem !important; 
+	margin-right: 0 !important;
+	
+}
+
+.item-input:last-child .item-inner{
+	border-bottom: 1px solid #41636b !important;
+}
+
+
+ion-menu ion-list .item-inner{
+	margin-left: 10px !important;
+}
+
+ion-menu .item:first-child ion-icon{
+	min-height: auto !important;
+	min-width: auto;
+}	

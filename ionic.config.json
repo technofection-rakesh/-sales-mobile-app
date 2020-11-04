@@ -1,0 +1,7 @@
+{
+  "name": "TrakomaticSales",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

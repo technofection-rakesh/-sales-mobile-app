@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Log Visit</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-item>
+    <h2>Company</h2>
+    <h3>Technofection Software Pvt. Ltd.</h3>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Visit Type</ion-label>
+    <ion-select [(ngModel)]="VisitType">
+		<ion-option *ngFor="let visitType of VisitTypeList" [value]="visitType.ID">{{visitType.Purpose}}</ion-option>
+	</ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Visit Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="VisitDate"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Followup Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="FollowupDate"></ion-datetime>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label stacked>Remarks</ion-label>
+    <ion-textarea class="remarks" [(ngModel)] = "Remarks"></ion-textarea>
+  </ion-item>
+
+</ion-list>
+
+<button ion-button full (click)="saveVisitLog()">Save</button>
+
+</ion-content>

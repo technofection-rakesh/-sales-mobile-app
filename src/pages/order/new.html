@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New Order</ion-title>
+	<ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+   
+  
+   <ion-card class="card card-md">
+	
+	<ion-card-content no-padding>
+	<ion-list class="list list-md"> 
+		<button ion-item (click)="openCustomerSelectionModal()">
+		<ion-icon name="contact" item-start></ion-icon>
+		<h2  [class]="CustomerName ? '' : 'customer-placeholder'">{{CustomerName || "Select customer"}}</h2>
+		</button>
+		
+		<button ion-item (click)="openProductSelectionModal()">
+		<ion-icon name="contact" item-start></ion-icon>
+		<h2  [class]="CustomerName ? '' : 'customer-placeholder'">{{ProductName || "Select product"}}</h2>
+		</button>
+
+		<ion-item>
+			<ion-label>Quantity</ion-label>
+			<ion-input type="number" min="1" [(ngModel)]="Quantity" placeholder="Enter Quantity"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<ion-label>Price</ion-label>
+			<ion-input type="number" [(ngModel)]="Price" placeholder="Enter Price"></ion-input>
+		</ion-item>
+		
+		<ion-item>
+			<button ion-button block color="primary" (click)="addItem()" class="add-button">Add Item</button>  
+		</ion-item>
+	</ion-list>
+	</ion-card-content>
+  </ion-card>
+  
+</ion-header>
+
+<ion-content>
+  <ion-list>
+	<ion-item-sliding *ngFor="let Item of OrderItems; let i = index;">
+		<ion-item>
+			<h2>{{Item.ProductName}}</h2>
+			<h3>Quantity: {{Item.Quantity}}</h3>
+			<ion-note item-end>{{((Item.Price + ((Item.Tax / 100) * Item.Price)) * Item.Quantity) | currency:"Rs. ":2}}</ion-note>
+		</ion-item>
+		<ion-item-options side="right">
+		  <button ion-button color="danger" (click)="deleteItem(i)">
+			<ion-icon name="trash"></ion-icon>
+			Delete
+		  </button>
+		</ion-item-options>
+	</ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+	<ion-list no-lines class="order-total">
+		<ion-item>
+			<button ion-button small color="dark" (click)="createOrder()">Save</button> 
+			<ion-note item-end>{{OrderTotal | currency:"Rs. ":2}}</ion-note>
+		</ion-item>
+	</ion-list>
+  </ion-toolbar>
+</ion-footer>

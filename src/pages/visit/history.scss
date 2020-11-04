@@ -1,0 +1,30 @@
+visit-history-page {
+	h3{
+		font-size: 1.35rem;
+		color: #6d6d6d;
+	}
+	
+	.input-wrapper .label h2{
+		color: #e8b45a !important;
+	}
+	
+	.input-wrapper .label p{ 
+		color: #ffe8c3 !important;
+	}
+	
+	.ion-content .fixed-content .scroll-content{  
+		background-color: color($colors, dark); 
+	}
+	
+	.card-content p{
+		color: color($colors, light) !important;  
+	}
+	
+	ion-item{
+		background-color: color($colors, primary) !important; 
+	}
+	
+	ion-card-content{
+		background-color: color($colors, primary) !important;  
+	}
+}

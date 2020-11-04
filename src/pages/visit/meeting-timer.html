@@ -1,0 +1,26 @@
+<ion-content class="background">
+	<ion-grid class="full-height">
+		<ion-row class="full-height" align-items-center>
+			<ion-col text-center>  
+				<ion-grid>
+					<ion-row>
+						<ion-col>
+							<div class="with-hours" *ngIf="Timer.Hours > 0">{{Timer.Hours.toString() | strpad : 2}} : {{Timer.Minutes.toString() | strpad : 2}} : {{Timer.Seconds.toString() | strpad : 2}}</div>
+							<div class="without-hours" *ngIf="Timer.Hours == 0">{{Timer.Minutes.toString() | strpad : 2}} : {{Timer.Seconds.toString() | strpad : 2}}</div>
+							
+							  <ion-icon name="time" class="timer"></ion-icon>  
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col col-6>						
+							<button [disabled]="IsMeetingOn || !IsGPSGood" ion-button (click)="startMeeting()" class="meeting-start">Start Meeting</button>
+						</ion-col>
+						<ion-col col-6>
+							<button [disabled]="!IsMeetingOn" ion-button color="danger" (click)="stopMeeting()">Stop Meeting</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>
